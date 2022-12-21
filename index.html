@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+
+    <title>Latiha JQuery</title>
+</head>
+<body class="bg-dark d-flex align-items-center" style="height: 100vh;">
+    <div class="container d-flex align-items-center flex-column">
+        <div class="text-light text-center">
+            <h1 class="">Simple Counter ++--</h1>
+            <h2 class="my-2">0</h2>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button class="btn btn-primary mx-2" id="tambah">Tambah++</button>
+
+            <button class="btn btn-danger mx-2" id="kurang">Kurang--</button>
+
+            <button class="btn btn-success mx-2" id="reset">Reset=0</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script>
+        // kalau ready
+        $(document).ready(function(){
+            let value = 0;
+            $('#tambah').click(function(){
+                value++;
+                $('h2').text(value);
+            });
+
+            $('#kurang').click(function(){
+                value--;
+                $('h2').text(value);
+            });
+
+            $('#reset').click(function(){
+                value = 0;
+                $('h2').text(value);
+            });
+        });
+    </script>
+
+</body>
+</html>
